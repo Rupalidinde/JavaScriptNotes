@@ -32,6 +32,7 @@ const outerFunction = () => {
 	console.log(temp);
 
 	function innerFunction() {
+		console.log(temp);
 		var temp = 345;
 		console.log(temp);
 	}
