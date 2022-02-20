@@ -1,6 +1,4 @@
-============
-Assignment-1
-============
+**Assignment-1**
 
 create a function calculator with two function arguments, and having four nested functions
 called addition, subtraction, multiplication and division, which will return the result
@@ -14,9 +12,7 @@ and write an object explaining execution context of every function and global ex
 
 ---
 
-============
-Assignment-2
-============
+**Assignment-2:**
 
 Write the function to calculate the area of a circle.
 Use regular as well as arrow notation
@@ -24,9 +20,7 @@ Assign this function to variable and use that variable to call this function
 
 ---
 
-=============
-Assignment-3
-=============
+**Assignment-3:**
 
 explain why console.log(temp) produces error in outerFunction but not in the innerFunction
 
