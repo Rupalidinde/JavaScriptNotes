@@ -1,28 +1,25 @@
-const calculator = (a, b) => {
-	function add() {
-		return a + b;
-	}
-	function subtract() {
-		return a - b;
-	}
-	function multiply() {
-		return a * b;
-	}
-	function divide() {
-		return a / b;
+var log = console.log;
+
+log('Inside global execution context');
+
+function functionOne() {
+	log('Inside function one');
+
+	function setTimeoutFunction() {
+		log('Inside setTimeoutFunction: I will be executed atleast after 1 sec');
 	}
 
-	return {
-		add: add,
-		subtract: subtract,
-		multiply: multiply,
-		divide: divide,
-	};
-};
+	setTimeout(setTimeoutFunction, 1000);
 
-const cal = calculator(12, 6);
+	for (var i = 0; i < 100000000; i++) {
+		// Blocking code. This makes the for loop to execute for more than 1 second
+		// Still setTimeoutFunction is not executed. It gets executed only after
+		// last statement of the code
+	}
 
-console.log(cal.add());
-console.log(cal.subtract());
-console.log(cal.multiply());
-console.log(cal.divide());
+	log('Exiting functionOne');
+}
+
+functionOne();
+
+log('Exiting global execution context');
