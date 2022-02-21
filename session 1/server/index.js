@@ -1,25 +1,24 @@
-var log = console.log;
+//Create an empty constructor function
+function Person() {}
+//Add property name, age to the prototype property of the Person constructor function
+Person.prototype.name = 'Ashwin';
+Person.prototype.age = 26;
+Person.prototype.friends = ['Jadeja', 'Vijay']; //Arrays are of reference type in JavaScript
+Person.prototype.sayName = function () {
+	console.log(this.name);
+};
 
-log('Inside global execution context');
+//Create objects using the Person constructor function
+var person1 = new Person();
+var person2 = new Person();
 
-function functionOne() {
-	log('Inside function one');
+//Add a new element to the friends array
+person1.friends.push('Amit');
 
-	function setTimeoutFunction() {
-		log('Inside setTimeoutFunction: I will be executed atleast after 1 sec');
-	}
+console.log(person1.friends); // Output: "Jadeja, Vijay, Amit"
+console.log(person2.friends); // Output: "Jadeja, Vijay, Amit"
 
-	setTimeout(setTimeoutFunction, 1000);
+person1.friends = ['akash'];
 
-	for (var i = 0; i < 100000000; i++) {
-		// Blocking code. This makes the for loop to execute for more than 1 second
-		// Still setTimeoutFunction is not executed. It gets executed only after
-		// last statement of the code
-	}
-
-	log('Exiting functionOne');
-}
-
-functionOne();
-
-log('Exiting global execution context');
+console.log(person1.friends); // Output: "Jadeja, Vijay, Amit"
+console.log(person2.friends); // Output: "Jadeja, Vijay, Amit"
