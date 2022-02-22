@@ -1,24 +1,17 @@
-//Create an empty constructor function
-function Person() {}
-//Add property name, age to the prototype property of the Person constructor function
-Person.prototype.name = 'Ashwin';
-Person.prototype.age = 26;
-Person.prototype.friends = ['Jadeja', 'Vijay']; //Arrays are of reference type in JavaScript
-Person.prototype.sayName = function () {
-	console.log(this.name);
-};
+function Foo() {}
 
-//Create objects using the Person constructor function
-var person1 = new Person();
-var person2 = new Person();
+const dunderProtoEqualsPrototypeOfFunction =
+	new Foo().__proto__ === Foo.prototype;
 
-//Add a new element to the friends array
-person1.friends.push('Amit');
+const actualObjectDontHavePrototype = new Foo().prototype === undefined;
 
-console.log(person1.friends); // Output: "Jadeja, Vijay, Amit"
-console.log(person2.friends); // Output: "Jadeja, Vijay, Amit"
+console.log(
+	'dunder Proto Equals Prototype Of Function',
+	dunderProtoEqualsPrototypeOfFunction
+);
 
-person1.friends = ['akash'];
+console.log('actual Object Dont Have Prototype', actualObjectDontHavePrototype);
 
-console.log(person1.friends); // Output: "Jadeja, Vijay, Amit"
-console.log(person2.friends); // Output: "Jadeja, Vijay, Amit"
+const fooObject = new Foo();
+console.log('fooObject is instance of Foo', fooObject instanceof Foo);
+console.log('fooObject is instance of Object', fooObject instanceof Object);
