@@ -9,3 +9,5 @@ console.log(calculator.add(12, 3));
 console.log(add(12, 3));
 
 console.log(defaultExportedFunction(12, 3));
+
+console.log(calculator.division(12, 3));
