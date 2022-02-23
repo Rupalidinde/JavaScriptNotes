@@ -7,3 +7,5 @@ function multiply(a, b) {
 }
 
 export { add, multiply };
+
+export default multiply;
