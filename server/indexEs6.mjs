@@ -34,3 +34,8 @@ arrayMethods.removeWithSplice();
 arrayMethods.addremoveWithSplice();
 arrayMethods.fill();
 arrayMethods.sort();
+
+/////////////////////===string methods==///////////////////
+
+// https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript
+// https://www.digitalocean.com/community/tutorials/how-to-index-split-and-manipulate-strings-in-javascript
