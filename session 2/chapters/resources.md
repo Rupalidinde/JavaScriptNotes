@@ -1,3 +1,5 @@
+[javascript.info](https://javascript.info/)
+
 [Array Methods](https://www.digitalocean.com/community/tutorial_series/working-with-arrays-in-javascript)
 
 [string methods - 1](https://www.digitalocean.com/community/tutorials/how-to-work-with-strings-in-javascript)
