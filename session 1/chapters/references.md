@@ -11,3 +11,5 @@
 - https://blog.bitsrc.io/javascript-internals-javascript-engine-run-time-environment-settimeout-web-api-eeed263b1617
 
 - https://hackernoon.com/understanding-js-the-event-loop-959beae3ac40
+
+- [event-loop](https://nodejs.dev/learn/the-nodejs-event-loop)
