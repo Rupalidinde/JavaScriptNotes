@@ -19,9 +19,9 @@ export class Logger {
     public error = (message: string, code: number, details: unknown): void => {
         const dateTime = new Date().toISOString();
         const err = {
-            message: message,
-            code: code,
-            details: details,
+            message : message,
+            code    : code,
+            details : details,
         };
         const temp_str = dateTime + '> ' + JSON.stringify(err, null, '    ');
         console.log(' ');

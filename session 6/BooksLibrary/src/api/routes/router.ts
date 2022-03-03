@@ -14,7 +14,7 @@ export class Router {
                 //Handling the base route
                 this._app.get('/api/v1/', (req, res) => {
                     res.send({
-                        message: `API [Version ${process.env.API_VERSION}]`,
+                        message : `API [Version ${process.env.API_VERSION}]`,
                     });
                 });
                 resolve(true);

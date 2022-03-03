@@ -9,9 +9,9 @@ export class ConfigurationManager {
 
     public static loadConfigurations = (): void => {
         ConfigurationManager._config = {
-            BaseUrl: process.env.BASE_URL,
-            SystemIdentifier: '',
-            MaxUploadFileSize: 0,
+            BaseUrl           : process.env.BASE_URL,
+            SystemIdentifier  : '',
+            MaxUploadFileSize : 0,
         };
     };
 }
