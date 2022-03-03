@@ -8,5 +8,8 @@
 		"start": "tsc && ts-node --files ./src/index.ts"
 	},
 	"author": "akash jadhav",
-	"license": "ISC"
+	"license": "ISC",
+	"devDependencies": {
+		"typescript": "^4.6.2"
+	}
 }
