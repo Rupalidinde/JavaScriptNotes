@@ -1,8 +1,9 @@
+import { IAuthenticator } from 'auth/authenticator.interface';
+import { Logger } from 'common/logger';
+import { AuthenticationResult } from 'domain.types/auth/auth.domain.types';
+import { CurrentUser } from 'domain.types/miscellaneous/current.user';
 import express from 'express';
 import jwt from 'jsonwebtoken';
-import { Logger } from '../../common/logger';
-import { AuthenticationResult } from '../../domain.types/auth/auth.domain.types';
-import { IAuthenticator } from '../authenticator.interface';
 
 //////////////////////////////////////////////////////////////
 
@@ -36,7 +37,7 @@ export class CustomAuthenticator implements IAuthenticator {
                     };
                     return res;
                 }
-                request.currentUser = user;
+                request.currentUser = user as CurrentUser;
             });
         } catch (err) {
             Logger.instance().log(JSON.stringify(err, null, 2));
