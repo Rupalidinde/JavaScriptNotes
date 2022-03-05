@@ -1,5 +1,5 @@
 import { AuthenticationType, AuthorizationType, Configurations } from './configuration.types';
-import * as configuration from 'app.config.json';
+import * as AppConfig from 'app.config.json';
 
 export class ConfigurationManager {
     static _config: Configurations = null;
@@ -10,8 +10,8 @@ export class ConfigurationManager {
             SystemIdentifier: '',
             MaxUploadFileSize: 0,
             Auth: {
-                Authentication: configuration.Auth.Authentication as AuthenticationType,
-                Authorization: configuration.Auth.Authorization as AuthorizationType,
+                Authentication: AppConfig.Auth.Authentication as AuthenticationType,
+                Authorization: AppConfig.Auth.Authorization as AuthorizationType,
             },
         };
     };
