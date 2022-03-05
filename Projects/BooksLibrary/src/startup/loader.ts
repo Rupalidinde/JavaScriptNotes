@@ -1,6 +1,6 @@
 import { container, DependencyContainer } from 'tsyringe';
 import { Authenticator } from 'auth/authenticator';
-import { Logger } from 'common/logger';
+import { Logger } from '../common/logger';
 import { Authorizer } from 'auth/authorizer';
 
 export class Loader {
