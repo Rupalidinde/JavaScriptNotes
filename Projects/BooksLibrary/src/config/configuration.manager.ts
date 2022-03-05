@@ -1,5 +1,5 @@
 import { AuthenticationType, AuthorizationType, Configurations } from './configuration.types';
-import * as AppConfig from 'app.config.json';
+import * as AppConfig from '../app.config.json';
 
 export class ConfigurationManager {
     static _config: Configurations = null;
