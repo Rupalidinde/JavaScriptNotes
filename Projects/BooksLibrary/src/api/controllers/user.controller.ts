@@ -1,6 +1,7 @@
+import { Authorizer } from 'auth/authorizer';
 import express from 'express';
-import { Loader } from '../../startup/loader';
-import { UserService } from '../../services/user.service';
+import { UserService } from 'services/user.service';
+import { Loader } from 'startup/loader';
 
 export class UserController {
     //#region member variables and constructors

@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken';
 import { Logger } from '../../common/logger';
 import { IAuthorizer } from '../authorizer.interface';
 import { CurrentUser } from '../../domain.types/miscellaneous/current.user';
-import { RolePrivilegeService } from '../../services/role.privilege.service';
 import { Loader } from '../../startup/loader';
 
 //const execSync = require('child_process').execSync;
@@ -12,7 +11,6 @@ import { Loader } from '../../startup/loader';
 //////////////////////////////////////////////////////////////
 
 export class CustomAuthorizer implements IAuthorizer {
-
     _rolePrivilegeService: RolePrivilegeService = null;
 
     constructor() {
@@ -31,7 +29,8 @@ export class CustomAuthorizer implements IAuthorizer {
             }
             const hasPrivilege = await this._rolePrivilegeService.hasPrivilegeForRole(
                 currentUser.CurrentRoleId,
-                context);
+                context
+            );
 
             if (!hasPrivilege) {
                 return false;
@@ -67,12 +66,10 @@ export class CustomAuthorizer implements IAuthorizer {
     };
 
     private hasConsent = async (currentRoleId: number, context: string): Promise<boolean> => {
-
         Logger.instance().log('Current role id: ' + currentRoleId);
         Logger.instance().log('Context: ' + context);
 
         //for time being, return true always
         return true;
     };
-
 }

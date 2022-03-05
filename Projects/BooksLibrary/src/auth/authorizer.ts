@@ -22,5 +22,3 @@ export class Authorizer {
         return await this._authorizer.generateUserSessionToken(user);
     };
 }
-
-////////////////////////////////////////////////////////////////////////

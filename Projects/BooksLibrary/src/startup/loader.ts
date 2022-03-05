@@ -1,6 +1,7 @@
-import { Authorizer } from '../auth/authorizer';
 import { container, DependencyContainer } from 'tsyringe';
-import { Logger } from '../common/logger';
+import { Authenticator } from 'auth/authenticator';
+import { Logger } from 'common/logger';
+import { Authorizer } from 'auth/authorizer';
 
 export class Loader {
     private static _container: DependencyContainer = container;
@@ -13,6 +14,12 @@ export class Loader {
 
     public static get authorizer() {
         return Loader._authorizer;
+    }
+
+    private static _authenticator: Authenticator = null;
+
+    public static get authenticator() {
+        return Loader._authenticator;
     }
 
     public static init = async (): Promise<boolean> => {
