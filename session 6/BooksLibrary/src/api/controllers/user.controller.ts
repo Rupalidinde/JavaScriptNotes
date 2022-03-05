@@ -1,4 +1,5 @@
 import express from 'express';
+import { Loader } from '../../startup/loader';
 import { UserService } from '../../services/user.service';
 
 export class UserController {

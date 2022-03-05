@@ -33,7 +33,7 @@
         "object-curly-spacing": ["warn", "always"],
         "space-infix-ops": "warn",
         "key-spacing": [
-            "warn",
+            "off",
             {
                 "singleLine": {
                     "beforeColon": false,
