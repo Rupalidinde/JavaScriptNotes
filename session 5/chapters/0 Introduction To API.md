@@ -10,9 +10,9 @@ It is an architectural development style in which the application is made up of 
 
 ## Read more here
 
-[ref-1](https://www.geeksforgeeks.org/monolithic-vs-microservices-architecture/)
+[microservices-vs-monolith](https://www.geeksforgeeks.org/monolithic-vs-microservices-architecture/)
 
-[ref-2](https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/)
+[microservices-vs-monolith](https://www.n-ix.com/microservices-vs-monolith-which-architecture-best-choice-your-business/)
 
 # The types of Web API
 
