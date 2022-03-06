@@ -65,12 +65,12 @@ export default class Application {
 
                 this._app.use(
                     fileUpload({
-                        limits            : { fileSize: MAX_UPLOAD_FILE_SIZE },
-                        preserveExtension : true,
-                        createParentPath  : true,
-                        parseNested       : true,
-                        useTempFiles      : true,
-                        tempFileDir       : '/tmp/uploads/',
+                        limits: { fileSize: MAX_UPLOAD_FILE_SIZE },
+                        preserveExtension: true,
+                        createParentPath: true,
+                        parseNested: true,
+                        useTempFiles: true,
+                        tempFileDir: '/tmp/uploads/',
                     })
                 );
                 resolve(true);
@@ -86,7 +86,11 @@ export default class Application {
                 const port = process.env.PORT;
                 const server = this._app.listen(port, () => {
                     const serviceName = `api-${process.env.NODE_ENV}`;
-                    Logger.instance().log(`${serviceName} is up and listening on port ${process.env.PORT.toString()}`);
+                    Logger.instance().log(
+                        `${serviceName} is up and listening on port ${process.env.PORT.toString()} url: ${
+                            ConfigurationManager._config.BaseUrl
+                        }`
+                    );
                     this._app.emit('server_started');
                 });
                 module.exports.server = server;
