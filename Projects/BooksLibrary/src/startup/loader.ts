@@ -3,6 +3,7 @@ import { Authenticator } from 'auth/authenticator';
 import { Logger } from '../common/logger';
 import { Authorizer } from 'auth/authorizer';
 import { DatabaseConnector } from 'database/database.connector';
+import { Injector } from './injector';
 
 export class Loader {
     private static _container: DependencyContainer = container;
@@ -32,6 +33,9 @@ export class Loader {
     public static init = async (): Promise<boolean> => {
         try {
             //Register injections here...
+
+            Injector.registerInjections(container);
+
             Loader._databaseConnector = container.resolve(DatabaseConnector);
 
             return true;
